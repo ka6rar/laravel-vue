@@ -13,7 +13,8 @@
          <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
         <body>
         <div  id="app">
-            <router-view></router-view>
+
+
 
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
