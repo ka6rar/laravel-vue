@@ -1,6 +1,6 @@
+extends('welcome')
 <template>
-  <div>
-    katat
-  </div>
+    <div>
+        karar
+    </div>
 </template>
-

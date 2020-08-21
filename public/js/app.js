@@ -18849,7 +18849,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n  katat\n")])
+  return _c("div", [_vm._v("\n    karar\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35135,12 +35135,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
-  router: _routers__WEBPACK_IMPORTED_MODULE_3__["default"],
-  render: function render(h) {
-    return h(_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  }
+  router: _routers__WEBPACK_IMPORTED_MODULE_3__["default"] // render: h => h(App)
+
 }); // map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-// Vue.component('example-component', require('./components/App.vue').default);
 
 /***/ }),
 

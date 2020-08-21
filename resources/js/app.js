@@ -6,11 +6,10 @@ import router from './routers';
 const app = new Vue({
     el: '#app',
     router ,
-    render: h => h(App)
+    // render: h => h(App)
 });
 
 
 
 // map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Vue.component('example-component', require('./components/App.vue').default);
