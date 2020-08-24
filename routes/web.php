@@ -12,9 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{any?}', function (){
-    return view('welcome');
-})->where('any', '^(?!api\/)[\/\w\.-]*');
-// Auth::routes();
+Route::get('{any}', function (){
+    return view('layouts.app');
+})->where( 'path', '([A-z\d-/_.]+)?' );
+
+
+Auth::routes();
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+ Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );

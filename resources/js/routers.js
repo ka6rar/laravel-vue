@@ -1,36 +1,26 @@
 import Vue from 'vue';
 import Router from 'vue-router'
-import Test from './components/test.vue'
-import Test2 from './components/test1.vue'
-import login  from './components/Auth/singup.vue'
-
+import create  from './components/Post/create.vue'
 
 Vue.use(Router);
 
+//    Vue.component('sadbar' , require('./components/Post/create.vue').default);
+// Vue.component('navbar' , require('./components/layout/navbar.vue').default);
 
 
 
 const routes  = [
+
 {
-    path: '/test',
-    name: 'test' ,
-    component: Test
-},
-{
-    path: '/test1',
-    name: 'test1' ,
-    component: Test2
-},
-{
-    path: '/singup' ,
-    name: 'singup'    ,
-    component: login
+    path: '/create'    ,
+    name:  'create',
+    component: create ,
 }
-]
+
+ ]
 
 const  router =  new Router({
     routes: routes ,
-    linkActiveClass: 'active' ,
     mode: 'history'
 })
 
