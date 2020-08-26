@@ -1,6 +1,7 @@
 <template>
     <div>
-        <form class="user"  @submit.prevent="">
+        <form class="user"  @submit.prevent="onsubmit">
+            <alert-success :form="form">Success</alert-success>
             <div class="form-group">
                 <input
                     v-model="form.title"
@@ -21,6 +22,8 @@
                     id="exampleInputPassword"
                     placeholder="Body"
                 />
+                    <has-error :form="form" field="body"></has-error>
+
             </div>
             <div class="form-group">
                 <div class="custom-control custom-checkbox small">
@@ -29,6 +32,7 @@
                         class="custom-control-input"
                         id="customCheck"
                     />
+                    <has-error :form="form" field="Titie"></has-error>
 
                 </div>
             </div>
@@ -51,7 +55,7 @@ export default {
     },
         methods: {
             onsubmit(){
-                this.form.post('api/post').then((response) => {
+                this.form.post('/api/post').then((response) => {
 
                 }).catch(() => {
 

@@ -5,12 +5,11 @@ import App  from    './components/Post/create'
 
 
 
-import { Form, HasError, AlertError } from 'vform'
+import { Form, HasError, AlertSuccess } from 'vform'
 
 window.Form = Form;
-
 Vue.component(HasError.name, HasError)
-Vue.component(AlertError.name, AlertError)
+Vue.component(AlertSuccess.name, AlertSuccess)
 
 
 

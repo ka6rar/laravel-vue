@@ -36,8 +36,8 @@
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Manger POST :</h6>
-          <router-link class="collapse-item" to="/create">Create</router-link>
-          <a class="collapse-item"  href="{{ route('login') }}">Cards</a>
+          <router-link class="collapse-item"  to="/create">Create</router-link>
+          <router-link  class="collapse-item" to="/index">Cards</router-link>
         </div>
       </div>
     </li>

@@ -12,15 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('{any}', function (){
-    return view('layouts.app');
-})->where( 'path', '([A-z\d-/_.]+)?' );
 
+
+
+
+Route::get('{any}', function () {
+    return view('layouts.app');
+});
 
 Auth::routes();
 
-
-
 Route::get('/home', 'HomeController@index')->name('home');
 
- Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );
+Route::get('{path}','HomeController@index');
+
+
+// Route::get('{any}', function (){
+//     return view('layouts.app');
+// })->where( 'path', '([A-z\d-/_.]+)?' );
+
+
+// Auth::routes();
+
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+//  Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );
