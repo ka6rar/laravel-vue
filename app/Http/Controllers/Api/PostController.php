@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Api;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
@@ -11,12 +9,9 @@ class PostController extends Controller
     public function index()
     {
        return response()->json([
-            'data' =>  Post::get()
+            'data' =>  Post::all()
         ]);
     }
-
-
-
 
     public function store(Request $request) {
         $post_add = new Post();
@@ -28,4 +23,31 @@ class PostController extends Controller
             'Date' => 'Success'
         ]);
     }
+
+
+
+    public function update($id ,Request $request)
+    {
+        $post = Post::find($id);
+         $post->body = $request->body;
+         $post->title = $request->title;
+         $post->save();
+
+         response()->json([
+             'data' => 'Sucsse Upadte'
+         ]);
+
+    }
+
+
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+      return ['masseges' => "Deleted User"];
+
+    }
+
+
+
 }

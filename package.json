@@ -24,7 +24,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "moment": "^2.27.0",
         "vform": "^1.0.1",
+        "vue-axios": "^2.1.5",
+        "vue-progressbar": "^0.7.5",
         "vue-router": "^3.4.3"
     }
 }

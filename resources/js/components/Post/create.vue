@@ -1,6 +1,7 @@
 <template>
     <div>
-        <form class="user"  @submit.prevent="onsubmit">
+      <div class="col-md-6" style="margin: 0px auto;">
+          <form   @submit.prevent="onsubmit">
             <alert-success :form="form">Success</alert-success>
             <div class="form-group">
                 <input
@@ -17,7 +18,7 @@
             <div class="form-group">
                 <input
                     v-model="form.body"
-                    type="password"
+                    type="text"
                     class="form-control form-control-user"
                     id="exampleInputPassword"
                     placeholder="Body"
@@ -34,12 +35,16 @@
                     />
                     <has-error :form="form" field="Titie"></has-error>
 
+
+
                 </div>
+
             </div>
 
-<button type="submit">karar</button>
-            <hr />
+         <button class="btn btn-success "   type="submit">karar</button>
         </form>
+
+      </div>
     </div>
 </template>
 <script>
@@ -56,11 +61,14 @@ export default {
         methods: {
             onsubmit(){
                 this.form.post('/api/post').then((response) => {
+                  this.$Progress.start()
 
                 }).catch(() => {
+                    alert('erorre')
+                });
 
-                })
-            }
+            } ,
+
         }
 }
 </script>

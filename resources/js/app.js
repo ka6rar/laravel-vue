@@ -1,16 +1,28 @@
 import Vue from 'vue';
 import 'bootstrap';
 import router from './routers';
-import App  from    './components/Post/create'
-
+window.axios = require('axios');
+import VueProgressBar from 'vue-progressbar'
 
 
 import { Form, HasError, AlertSuccess } from 'vform'
+
+let Fire = new Vue()
+window.Fire = Fire;
+
 
 window.Form = Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertSuccess.name, AlertSuccess)
 
+
+
+
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '2px'
+})
 
 
 
